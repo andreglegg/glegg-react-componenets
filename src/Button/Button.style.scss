@@ -1,0 +1,64 @@
+@import '../cssvars';
+
+.buttonBase {
+    color: #616161;
+    border: none;
+    padding: 10px 14px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    transition: 50ms ease-in;
+    background: $default;
+    background-image: linear-gradient(bottom, darken($default, 10%) 0%, $default 100%);
+    box-shadow: inset 0px 1px 0px $default, 0px 2px 0px 0px darken($default, 10%);
+    &:hover {
+        background: darken($default, 3%);
+        background-image: linear-gradient(bottom, darken($default, 0%) 0%, $default 100%);
+    }
+    &:active {
+        box-shadow: inset 0px 0px 0px $default, 0px 1px 0px 0px darken($default, 10%);
+        transform: translateY(1px);
+    }
+    .icon {
+        display: inline-block;
+        transform: translateY(1px);
+        margin-right: 3px;
+    }
+}
+
+$color: $primary;
+.primary {
+    color: whitesmoke;
+    background: $color;
+    background-image: linear-gradient(bottom, darken($color, 10%) 0%, $color 100%);
+    box-shadow: inset 0px 1px 0px $color, 0px 2px 0px 0px darken($color, 10%);
+    &:hover {
+        background: darken($color, 3%);
+        background-image: linear-gradient(bottom, darken($color, 0%) 0%, $color 100%);
+    }
+    &:active {
+        box-shadow: inset 0px 0px 0px $color, 0px 1px 0px 0px darken($color, 10%);
+        transform: translateY(1px);
+    }
+}
+
+$color: $red;
+.red {
+    color: whitesmoke;
+    background: $color;
+    background-image: linear-gradient(bottom, darken($color, 10%) 0%, $color 100%);
+    box-shadow: inset 0px 1px 0px $color, 0px 2px 0px 0px darken($color, 10%);
+    &:hover {
+        background: darken($color, 3%);
+        background-image: linear-gradient(bottom, darken($color, 0%) 0%, $color 100%);
+    }
+    &:active {
+        box-shadow: inset 0px 0px 0px $color, 0px 1px 0px 0px darken($color, 10%);
+        transform: translateY(1px);
+    }
+}
