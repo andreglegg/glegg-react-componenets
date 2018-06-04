@@ -1,3 +1,8 @@
-import MyComponent from './Button';
+import Button from './Button';
+import Spinner from './Spinner';
 
-export default MyComponent;
+export {
+    Button,
+    Spinner
+};
+
