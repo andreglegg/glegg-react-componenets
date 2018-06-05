@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Button, Spinner} from '../src/index';
+import {Button, Spinner, Card} from '../src/index';
 
 import {Icon} from 'react-icons-kit'
 import {home} from 'react-icons-kit/icomoon/home'
@@ -52,6 +52,13 @@ class Example extends React.Component {
                 <div>
                     <Spinner/>
                 </div>
+
+                <Card style={{textAlign: 'center'}}>
+                    <Spinner radius={10} color={'black'}/> Card with spinner
+                </Card>
+                <Button className={'active'} primary onClick={() => console.log('clicked')}>
+                    Primary
+                </Button>
             </div>
         );
     }

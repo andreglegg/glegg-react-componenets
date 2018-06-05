@@ -1,11 +1,12 @@
 // @flow
 
 import React from 'react';
-import './Spinner.style.scss';
+import './Card.style.scss';
 
 type Props = {
-    radius?: number,
-    color?: string
+    style?: Object,
+    className?: Object,
+    children: any,
 }
 
 class Button extends React.Component<Props> {
@@ -16,10 +17,11 @@ class Button extends React.Component<Props> {
     }
 
     render() {
-        const {radius = 100, color} = this.props;
+        const {style, className, children} = this.props;
 
         return (
-            <div className={'spinner'} style={{width: radius, height: radius, borderRadius: '50%', borderColor: color}}>
+            <div className={['card', className].join(' ')} style={style}>
+                {children}
             </div>
         )
     }
