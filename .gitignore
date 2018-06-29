@@ -1,12 +1,11 @@
 node_modules
-dist/*.js
-examples/dist/*.js
-coverage
+dist
 
 .idea
 
 # lock files
 package-lock.json
+pnpm-debug.log
 yarn.lock
 
 # others
