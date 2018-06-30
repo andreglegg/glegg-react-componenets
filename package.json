@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava \"src/**/*.test.js\" -- --verbose",
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile"
@@ -19,19 +19,32 @@
     "url": "https://github.com/andreglegg/glegg-react-componenets/issues"
   },
   "homepage": "https://github.com/andreglegg/glegg-react-componenets#readme",
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "./helpers/setup-test-env.js"
+    ]
+  },
   "peerDependencies": {
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "jsdom": "^11.11.0",
     "react": "^16.4.1",
+    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.4.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.14.0",
