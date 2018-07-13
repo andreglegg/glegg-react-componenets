@@ -5,7 +5,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
     filename: "./index.html"
 });
 module.exports = {
-    entry: path.join(__dirname, "examples/src/index.js"),
+    entry: path.join(__dirname, "examples/src/index.tsx"),
     module: {
         rules: [
             {
